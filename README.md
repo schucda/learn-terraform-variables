@@ -82,9 +82,7 @@ Terraform Cloud can be used to manage terraform as well. Things that you can do 
 - [ ] [Provision](https://learn.hashicorp.com/collections/terraform/provision) - Use Packer or Cloud-init to automatically provision SSH keys and a web server onto a Linux VM created by Terraform in AWS.
 - [ ] [Import](https://learn.hashicorp.com/tutorials/terraform/state-import) - Import existing infrastructure into Terraform.
 - [ ] To read more about available configuration options, explore the [Terraform documentation](https://www.terraform.io/docs/index.html).
-- [ ] Learn more about Terraform Cloud
-* Although Terraform Cloud can act as a standard remote backend to support Terraform runs on local machines, it works even better as a remote run environment. It supports two main workflows for performing Terraform runs:
-
-A VCS-driven workflow, in which it automatically queues plans whenever changes are committed to your configuration's VCS repo.
-An API-driven workflow, in which a CI pipeline or other automated tool can upload configurations directly.
-For a hands-on introduction to the Terraform Cloud VCS-driven workflow, [follow the Terraform Cloud getting started tutorials](https://learn.hashicorp.com/collections/terraform/cloud-get-started). Terraform Cloud also offers commercial solutions which include team permission management, policy enforcement, agents, and more.
+- [ ] Learn more about Terraform Cloud - Although Terraform Cloud can act as a standard remote backend to support Terraform runs on local machines, it works even better as a remote run environment. It supports two main workflows for performing Terraform runs:
+  * A VCS-driven workflow, in which it automatically queues plans whenever changes are committed to your configuration's VCS repo.
+  * An API-driven workflow, in which a CI pipeline or other automated tool can upload configurations directly.
+  For a hands-on introduction to the Terraform Cloud VCS-driven workflow, [follow the Terraform Cloud getting started tutorials](https://learn.hashicorp.com/collections/terraform/cloud-get-started). Terraform Cloud also offers commercial solutions which include team permission management, policy enforcement, agents, and more.

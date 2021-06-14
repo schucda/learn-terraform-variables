@@ -70,3 +70,11 @@ output "instance_public_dns" {
 When you apply the terraform configuration, it will update this with the instance if and Public IP. To view the output use the folling command:
 *terraform output*
 
+Terraform Cloud can be used to manage terraform as well. Things that you can do with terraform cloud:
+* Store state about your infrastrcture so you can share/manage with team members
+* Store terraform configuration for versioning
+* Execute terraform changes, etc... from the cloud or from local machine.
+
+# Next Steps:
+- [] Learn how to manage and version terraform files in Terraform Cloud
+- 

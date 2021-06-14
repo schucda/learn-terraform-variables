@@ -7,3 +7,11 @@ interface to change how a given configuration behaves.
 
 Follow along with this [tutorial on HashiCorp
 Learn](https://learn.hashicorp.com/tutorials/terraform/variables?in=terraform/configuration-language).
+
+# Terraform Commands:
+* *terraform init* - Initializes the directory and installs the proviers defined configuration Terraform downloads the aws provider and installs it in a hidden subdirectory of your current working directory, named .terraform. The terraform init command prints out which version of the provider was installed. Terraform also creates a lock file named .terraform.lock.hcl which specifies the exact provider versions used, so that you can control when you want to update the providers used for your project.
+* *terraform fmt* - Formats the terraform files and returns any files that were modified if necessary
+* *terraform validate* - Validates that the configuration you have created is correct.
+* *terraform apply* - Applies the configuration that you have created.
+* *terraform show* - Displays the current state of the 
+* *terraform state list* - Displays more specific results about specific terraform managed resources.

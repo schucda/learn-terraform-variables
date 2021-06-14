@@ -75,9 +75,29 @@ Terraform Cloud can be used to manage terraform as well. Things that you can do 
 * Store terraform configuration for versioning
 * Execute terraform changes, etc... from the cloud or from local machine.
 
+# Terraform Cloud Setup:
+The following needs added to the main.tf file to setup the backend for terraform cloud
+
+terraform {
+backend "remote" {
+  organization = "<ORG_NAME>"
+  workspaces {
+    name = "Example-Workspace"
+  }
+}
+
+*terraform login* - Allows you to login to terraform cloud and retrieve a key
+*terrafrom init* - required to initialize or reinitalize a terraform directory to use the backend
+You must set variables in the terraform work space, be sure to make them sensitive
+* AWS_ACCESS_KEY_ID
+* AWS_SECRET_ACCESS_KEY
+
+Now apply the configuration using ***terraform apply***
+
 # Next Steps:
 - [ ] Learn how to manage and version terraform files in Terraform Cloud
 - [ ] [Configuration Language](https://learn.hashicorp.com/collections/terraform/configuration-language) - Get more familiar with variables, outputs, dependencies, meta-arguments, and other language features to write more sophisticated Terraform configurations.
+  - [X] Define Infrastructure with Terraform Resources
 - [ ] [Modules](https://learn.hashicorp.com/tutorials/terraform/module) - Organize and re-use Terraform configuration with modules
 - [ ] [Provision](https://learn.hashicorp.com/collections/terraform/provision) - Use Packer or Cloud-init to automatically provision SSH keys and a web server onto a Linux VM created by Terraform in AWS.
 - [ ] [Import](https://learn.hashicorp.com/tutorials/terraform/state-import) - Import existing infrastructure into Terraform.

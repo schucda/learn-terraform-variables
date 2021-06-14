@@ -13,5 +13,6 @@ Learn](https://learn.hashicorp.com/tutorials/terraform/variables?in=terraform/co
 * *terraform fmt* - Formats the terraform files and returns any files that were modified if necessary
 * *terraform validate* - Validates that the configuration you have created is correct.
 * *terraform apply* - Applies the configuration that you have created.
+  * The apply command is used to also update existing resources. For example, if you want to change an AMI, update the main.tf file with the new AMI, then apply. This will destroy the old instance and redeploy with new AMI.
 * *terraform show* - Displays the current state of the 
 * *terraform state list* - Displays more specific results about specific terraform managed resources.

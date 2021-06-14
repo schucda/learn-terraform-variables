@@ -94,6 +94,12 @@ You must set variables in the terraform work space, be sure to make them sensiti
 
 Now apply the configuration using ***terraform apply***
 
+# Creating multiple resources of a similiar type:
+ You can use the count or the for_each arguments found [here](https://www.terraform.io/docs/language/meta-arguments/count.html)
+ 
+ Using Count through out the 
+ 
+
 # Next Steps:
 - [ ] Learn how to manage and version terraform files in Terraform Cloud
 - [ ] [Configuration Language](https://learn.hashicorp.com/collections/terraform/configuration-language) - Get more familiar with variables, outputs, dependencies, meta-arguments, and other language features to write more sophisticated Terraform configurations.

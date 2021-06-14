@@ -96,8 +96,35 @@ Now apply the configuration using ***terraform apply***
 
 # Creating multiple resources of a similiar type:
  You can use the count or the for_each arguments found [here](https://www.terraform.io/docs/language/meta-arguments/count.html)
+
+//Add count to add 3 instances.. include the ${count.index} command in the name.
+
+resource "aws_instance" "web" {
+  count = 3   #Creates three EC2 instances
+  
+  ami                    = "ami-a0cfeed8"
+  instance_type          = "t2.micro"
+  user_data              = file("init-script.sh")
+  vpc_security_group_ids = [aws_security_group.web-sg.id]
+
+  tags = {
+    Name = "${random_pet.name.id} ${count.index}" #${count.index} used as part of the multiple instances being
+  }
+}
+
+I became stupmped on this part of output where I could't figure out how to use the path
  
- Using Count through out the 
+ 
+#I want able to output the dns name using the * to iterate over each instance being created with count, but I couldnt figure out how to append the path.
+output "domain-name" {
+ value = ["${aws_instance.web.*.public_dns}"]
+}
+
+//Couldn't figure out how to make this work with count... Kept getting errors when trying to include the /index.php path
+
+#output "application-url" {
+#  value = ["${aws_instance.web.*.public_dns("index.php")}"]
+#}
  
 
 # Next Steps:

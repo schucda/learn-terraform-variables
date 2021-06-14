@@ -76,5 +76,5 @@ Terraform Cloud can be used to manage terraform as well. Things that you can do 
 * Execute terraform changes, etc... from the cloud or from local machine.
 
 # Next Steps:
-- [] Learn how to manage and version terraform files in Terraform Cloud
+- [ ] Learn how to manage and version terraform files in Terraform Cloud
 - 

@@ -1,3 +1,7 @@
+IaC - Infrastrucutre as code is a strategt for managing complexity.
+
+Managing Infrastructure in osftware is an apporach to  borrow practices form software like, self testing, managing artificats, etc.. 
+
 # Learn Terraform variables
 
 You can use input variables to customize your Terraform configuration with

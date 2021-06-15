@@ -143,6 +143,8 @@ output "domain-name" {
   * A VCS-driven workflow, in which it automatically queues plans whenever changes are committed to your configuration's VCS repo.
   * An API-driven workflow, in which a CI pipeline or other automated tool can upload configurations directly.
   For a hands-on introduction to the Terraform Cloud VCS-driven workflow, [follow the Terraform Cloud getting started tutorials](https://learn.hashicorp.com/collections/terraform/cloud-get-started). Terraform Cloud also offers commercial solutions which include team permission management, policy enforcement, agents, and more.
+  
+- [ ] Add the git plugin to scan your commits for for secrets.
 
 # Terrafrom Resources [resource tutorial](https://learn.hashicorp.com/tutorials/terraform/resource?in=terraform/configuration-language)
 * [AWS Provider Documentation](https://learn.hashicorp.com/tutorials/terraform/resource?in=terraform/configuration-language)

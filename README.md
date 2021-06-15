@@ -129,8 +129,32 @@ output "domain-name" {
 #output "application-url" {
 #  value = ["${aws_instance.web.*.public_dns("index.php")}"]
 #}
- 
 
+# heredoc allows you to write a policy across multiple lines see the following example
+
+policy = <<EOT //EOT coudl be anytihng else you choose
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": [
+        "s3:ListAllMyBuckets"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    },
+    {
+      "Action": [
+        "s3:*"
+      ],
+      "Effect": "Allow",
+      "Resource": "${aws_s3_bucket.bucket.arn}"
+    }
+
+  ]
+}
+EOT //Must match the definition above.
+               
 # Next Steps:
 - [ ] Learn how to manage and version terraform files in Terraform Cloud
 - [ ] [Configuration Language](https://learn.hashicorp.com/collections/terraform/configuration-language) - Get more familiar with variables, outputs, dependencies, meta-arguments, and other language features to write more sophisticated Terraform configurations.

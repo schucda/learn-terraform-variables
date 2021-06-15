@@ -135,6 +135,8 @@ output "domain-name" {
 - [ ] Learn how to manage and version terraform files in Terraform Cloud
 - [ ] [Configuration Language](https://learn.hashicorp.com/collections/terraform/configuration-language) - Get more familiar with variables, outputs, dependencies, meta-arguments, and other language features to write more sophisticated Terraform configurations.
   - [X] Define Infrastructure with Terraform Resources
+  - [ ] https://learn.hashicorp.com/tutorials/terraform/provider-use?in=terraform/configuration-language
+  - [ ] 
 - [ ] [Modules](https://learn.hashicorp.com/tutorials/terraform/module) - Organize and re-use Terraform configuration with modules
 - [ ] [Provision](https://learn.hashicorp.com/collections/terraform/provision) - Use Packer or Cloud-init to automatically provision SSH keys and a web server onto a Linux VM created by Terraform in AWS.
 - [ ] [Import](https://learn.hashicorp.com/tutorials/terraform/state-import) - Import existing infrastructure into Terraform.
